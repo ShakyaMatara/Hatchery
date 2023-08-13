@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="robots" content="all">
+            <title>tickets page</title>
+            <link rel="stylesheet" href="confirmation.css">
+            
+        </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <div class="nav-links" id="navLinks">  
+                        <i class="fa fa-close" onclick="hideMenu()"></i>
+                    </div>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>   
+                <h1><b>Buy Tickets</b></h1>
+                <p>Tickets &gt; Details &gt; Payment &gt; <b>Confirmation</b></p>
+            </section>
+
+            <section class="info">
+                <div class="row">
+                    <div class="info-col">
+                        <h1>CONFIRMATION</h1>
+                            <p>Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order.</p>
+                    </div>
+                </div>
+            </section>
+
+            <table class="summaryUpdate">  
+                <tr>
+                    <td>Name</td>
+                    <td id="fnameSummary"></td> 
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td id="chosenDateTableU"></td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td id="totalnumhrsU"></td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td id="durationfullU"></td>
+                </tr>
+                <tr>
+                    <td>Moblie</td>
+                    <td id="phoneSummary"></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td id="emailSummary"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="genderSummary"></td>
+                </tr>
+                <tr>
+                    <th>Tickets</th>
+                    <th>Charges</th>
+                </tr>
+                <tr id="slAdultRowU">
+                    <td id="slAdultSummaryU"> Sl adult</td>
+                    <td id="slAdultSummaryPriceU"></td>
+                </tr>
+                <tr id="slChildRowU">
+                    <td id="slChildSummaryU"> Sl child</td>
+                    <td id="slChildSummaryPriceU"></td>
+                </tr>
+                <tr id="fAdultRowU">
+                    <td id="fAdultSummaryU"> foreigner adult</td>
+                    <td id="fAdultSummaryPriceU"></td>
+                </tr>
+                <tr id="fChildRowU">
+                    <td id="fChildSummaryU"> foreigner child</td>
+                    <td id="fChildSummaryPriceU"></td>
+                </tr>
+                <tr id="infantRowU">
+                    <td id="infantSummaryU"> infant</td>
+                    <td id="infantSummaryPriceU"></td>
+                </tr>
+                <tr>
+                    <th>Total Payable </th>
+                    <th id="totalPayableSummaryU"> $0</th>
+                </tr>
+            </table>
+
+            
+            <script src="confirmation.js"></script>   
+        </body>
+    </html>

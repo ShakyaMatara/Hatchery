@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <meta name="robots" content="all">
+        <title>details page</title>
+        <link rel="stylesheet" href="detailspage.css">
+        <link rel="stylesheet" href="international-telephone-input.css" >
+        <style>
+            ul {
+                top: 100% !important;
+                transform: translateY(0%) !important;
+            }
+
+            .iti {
+                position: relative;
+                display: inline-block;
+            }
+
+            input[type=tel] {
+                padding-right: 6px;
+                padding-left: 52px;
+                margin-left: 0;
+
+                position: relative;
+                z-index: 0;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                margin-right: 0;
+                border: 1px solid #CCC;
+                width: 270px;
+                height: 35px;
+                border-radius: 2px;
+                font-family: inherit;
+                font-size: 100%;
+                color: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                <div class="nav-links" id="navLinks">  
+                    <i class="fa fa-close" onclick="hideMenu()"></i>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>   
+            <h1><b>Buy Tickets</b></h1>
+            <p><b>Tickets</b> &gt; Details &gt; Payment &gt; Confirmation</p>
+        </section>
+        <br><br><br><br><br><br>
+        
+
+        <table class="summary">  
+            <tr>
+                <td>Date</td>
+                <td id="chosenDateTable"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="totalnumhrs"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="durationfull"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="slAdultRow">
+                <td id="slAdultSummary"> Sl adult</td>
+                <td id="slAdultSummaryPrice"></td>
+            </tr>
+            <tr id="slChildRow">
+                <td id="slChildSummary"> Sl child</td>
+                <td id="slChildSummaryPrice"></td>
+            </tr>
+            <tr id="fAdultRow">
+                <td id="fAdultSummary"> foreigner adult</td>
+                <td id="fAdultSummaryPrice"></td>
+            </tr>
+            <tr id="fChildRow">
+                <td id="fChildSummary"> foreigner child</td>
+                <td id="fChildSummaryPrice"></td>
+            </tr>
+            <tr id="infantRow">
+                <td id="infantSummary"> infant</td>
+                <td id="infantSummaryPrice"></td>
+            </tr>
+            <tr>
+                <th>Total Payable </th>
+                <th id="totalPayableSummary"> $0</th>
+            </tr>
+        </table><br>
+
+        <section class="details-content">
+            <div class="row">
+            <div class="-left">
+            <div class="comment-box">
+                    <h3>Enter your Details</h3><br>
+                    <form id="myForm" class="comment-form">
+                        <label for="fname"> Full Name:</label><br>
+                        <input type="text" id="fname" name="fname" required><br>
+                        <label for="phone">Moblie Number:</label><br>
+                        <p class="phone-label"></p>
+                                    <div class="iti">
+                                        <input type="tel" id="phone" name="phone" required>
+                                    </div><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" required><br>
+                        <label for="conemail">Confirm Email:</label><br>
+                        <input type="email" id="conemail" name="conemail" required><br><br>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br><br>
+                    <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <table class="summaryUpdate">  
+            <tr>
+                <td>Name</td>
+                <td id="fnameSummary"></td> 
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td id="chosenDateTableU"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="totalnumhrsU"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="durationfullU"></td>
+            </tr>
+            <tr>
+                <td>Moblie</td>
+                <td id="phoneSummary"></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td id="emailSummary"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="genderSummary"></td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr id="slAdultRowU">
+                <td id="slAdultSummaryU"> Sl adult</td>
+                <td id="slAdultSummaryPriceU"></td>
+            </tr>
+            <tr id="slChildRowU">
+                <td id="slChildSummaryU"> Sl child</td>
+                <td id="slChildSummaryPriceU"></td>
+            </tr>
+            <tr id="fAdultRowU">
+                <td id="fAdultSummaryU"> foreigner adult</td>
+                <td id="fAdultSummaryPriceU"></td>
+            </tr>
+            <tr id="fChildRowU">
+                <td id="fChildSummaryU"> foreigner child</td>
+                <td id="fChildSummaryPriceU"></td>
+            </tr>
+            <tr id="infantRowU">
+                <td id="infantSummaryU"> infant</td>
+                <td id="infantSummaryPriceU"></td>
+            </tr>
+            <tr>
+                <th>Total Payable </th>
+                <th id="totalPayableSummaryU"> $0</th>
+            </tr>
+        </table>
+
+        <a href="payment.html" class="hero-btn" style="display: none;">Continue with purchase</a>
+        <br><br><br>
+        <script src="international-telephone-input.js"></script>
+        <script src="detailspage.js"></script> 
+    </body>
+</html>

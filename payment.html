@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="robots" content="all">
+            <title>tickets page</title>
+            <link rel="stylesheet" href="payment.css">
+            
+        </head>
+        <body>
+            <section class="sub-header">
+                <nav>
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <div class="nav-links" id="navLinks">  
+                        <i class="fa fa-close" onclick="hideMenu()"></i>
+                    </div>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>   
+                <h1><b>Buy Tickets</b></h1>
+                <p>Tickets &gt; Details &gt; <b>Payment</b> &gt; Confirmation</p>
+            </section>
+
+                <table class="summaryUpdate">  
+                    <tr>
+                        <td>Name</td>
+                        <td id="fnameSummary"></td> 
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td id="chosenDateTableU"></td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td id="totalnumhrsU"></td>
+                    </tr>
+                    <tr>
+                        <td>Duration</td>
+                        <td id="durationfullU"></td>
+                    </tr>
+                    <tr>
+                        <td>Moblie</td>
+                        <td id="phoneSummary"></td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td id="emailSummary"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td id="genderSummary"></td>
+                    </tr>
+                    <tr>
+                        <th>Tickets</th>
+                        <th>Charges</th>
+                    </tr>
+                    <tr id="slAdultRowU">
+                        <td id="slAdultSummaryU"> SL adult</td>
+                        <td id="slAdultSummaryPriceU"></td>
+                    </tr>
+                    <tr id="slChildRowU">
+                        <td id="slChildSummaryU"> SL child</td>
+                        <td id="slChildSummaryPriceU"></td>
+                    </tr>
+                    <tr id="fAdultRowU">
+                        <td id="fAdultSummaryU"> foreigner adult</td>
+                        <td id="fAdultSummaryPriceU"></td>
+                    </tr>
+                    <tr id="fChildRowU">
+                        <td id="fChildSummaryU"> foreigner child</td>
+                        <td id="fChildSummaryPriceU"></td>
+                    </tr>
+                    <tr id="infantRowU">
+                        <td id="infantSummaryU"> infant</td>
+                        <td id="infantSummaryPriceU"></td>
+                    </tr>
+                    <tr>
+                        <th>Total Payable </th>
+                        <th id="totalPayableSummaryU"> $0</th>
+                    </tr>
+                </table><br><br><br>
+
+                <div class="card1">
+                    <h3>Payment details</h3>
+
+                    <form id="paymentForm">
+                        <label for="cardName">Card Holder's Name(please enter your full name):</label><br>
+                        <input type="text" id="cardName" name="cardName">
+                        <div id="nameError" class="error"></div><br>
+                
+                        <label for="cardNumber">Card Number(without spaces):</label><br>
+                        <input type="text" id="cardNumber" name="cardNumber">
+                        <div id="numberError" class="error"></div><br>
+                
+                        <label for="expiryDate">Expiry Date(month/year):</label><br>
+                        <input type="text" id="expiryDate" name="expiryDate">
+                        <div id="expiryError" class="error"></div><br>
+                
+                        <label for="cvv">CVV/CVC:</label><br>
+                        <input type="text" id="cvv" name="cvv">
+                        <div id="cvvError" class="error"></div><br>
+                    </form>
+                </div>
+                <a href="confirmation.html" id="totalPayableSummarybutton"  class="hero-btn">pay</a>
+                <br><br><br>
+            <script src="payment.js"></script>
+        </body>
+    </html>
